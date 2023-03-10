@@ -17,4 +17,9 @@ class HomeController extends Controller
     public function myCart(){
         return view('website.cart.my-cart');
     }
+
+    public function account()
+    {
+        return view('website.auth.account');
+    }
 }
