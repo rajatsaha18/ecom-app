@@ -39,10 +39,10 @@
                             Product Category
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">Men Fashion</a></li>
-                            <li><a class="dropdown-item" href="#">Women Fashion</a></li>
-                            <li><a class="dropdown-item" href="#">Electronics</a></li>
-                            <li><a class="dropdown-item" href="#">Home Products</a></li>
+                            <li><a class="dropdown-item" href="{{ route('category') }}">Men Fashion</a></li>
+                            <li><a class="dropdown-item" href="{{ route('category') }}">Women Fashion</a></li>
+                            <li><a class="dropdown-item" href="{{ route('category') }}">Electronics</a></li>
+                            <li><a class="dropdown-item" href="{{ route('category') }}">Home Products</a></li>
 
                         </ul>
                     </li>

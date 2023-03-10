@@ -10,6 +10,10 @@ class HomeController extends Controller
         return view('website.home.home');
     }
 
+    public function category(){
+        return view('website.category.category');
+    }
+
     public function detail(){
         return view('website.detail.product-detail');
     }
