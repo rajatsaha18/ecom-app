@@ -19,7 +19,7 @@ Product-detail Page
                     <h3>TK. 600</h3>
                     <p>Product Quantity</p>
                     <input type="number">
-                    <input type="button" class="btn btn-success mx-auto mt-2" value="Add To Cart"/>
+                    <a href="{{ route('my-cart') }}" class="btn btn-success mx-auto mt-2">Add To Cart</a>
                 </div>
             </div>
         </div>
