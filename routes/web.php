@@ -27,4 +27,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
 
     Route::get('/add-category', [CategoryController::class,'addCategory'])->name('add-category');
     Route::get('/manage-category', [CategoryController::class,'manageCategory'])->name('manage-category');
+
+    Route::get('/add-product', [CategoryController::class,'addProduct'])->name('add-product');
+    Route::get('/manage-product', [CategoryController::class,'manageProduct'])->name('manage-product');
 });

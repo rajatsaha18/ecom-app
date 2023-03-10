@@ -13,5 +13,11 @@ class CategoryController extends Controller
     public function manageCategory(){
         return view('admin.category.manage-category');
     }
+    public function addProduct(){
+        return view('admin.product.add-product');
+    }
+    public function manageProduct(){
+        return view('admin.product.manage-product');
+    }
 
 }
