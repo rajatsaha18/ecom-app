@@ -1,9 +1,9 @@
 @extends('admin.master')
 
 @section('title')
-Add-Category Page
+Manage-Category Page
 @endsection
 
 @section('body')
-This is add category page
+This is manage category page
 @endsection
