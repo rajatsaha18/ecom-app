@@ -64,7 +64,7 @@
 
     @yield('body')
 
-    <section class="mt-5 py-3 bg-info">
+    <section class="mt-5 py-3 bg-info fixed-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
