@@ -8,15 +8,43 @@ use Illuminate\Database\Eloquent\Model;
 class Category extends Model
 {
     use HasFactory;
-    private $categories;
+    private static $categories;
+    private static $imageName;
+    private static $directory;
+    private static $imageUrl;
     private static $category;
+
+    public static function getImageUrl($image){
+        self::$imageName = $image->getClientOriginalName();
+        self::$directory = 'category-images/';
+        $image->move(self::$directory, self::$imageName);
+        self::$imageUrl = self::$directory.self::$imageName;
+        return self::$imageUrl;
+    }
 
     public static function newCategory($request){
 
         self::$category = new Category();
-        self::$category->name = $request->name;
-        self::$category->description = $request->description;
-        self::$category->image = $request->image;
+        self::$category->name           = $request->name;
+        self::$category->description    = $request->description;
+        self::$category->image          = self::getImageUrl($request->file('image'));
+        self::$category->save();
+    }
+
+    public static function updateCategory($request, $id){
+        self::$category = Category::find($id);
+        if($request->file('image')){
+            if(file_exists(self::$category->image)){
+                unlink(self::$category->image);
+            }
+            self::$imageUrl = self::getImageUrl($request->file('image'));
+        }
+        else{
+            self::$imageUrl = self::$category->image;
+        }
+        self::$category->name           = $request->name;
+        self::$category->description    = $request->description;
+        self::$category->image          = self::$imageUrl;
         self::$category->save();
     }
 }
