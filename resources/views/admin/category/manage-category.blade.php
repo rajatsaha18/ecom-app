@@ -30,7 +30,7 @@ Manage-Category Page
                                 <td><img src="{{ asset($category->image) }}" alt="" height="70" width="50px"></td>
                                 <td>
                                     <a href="{{ route('edit-category',['id' => $category->id]) }}" class="btn btn-success btn-sm">Edit</a>
-                                    <a href="{{ route('delete-category',['id' => $category->id]) }}" class="btn btn-danger btn-sm">Delete</a>
+                                    <a href="{{ route('delete-category',['id' => $category->id]) }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure delete this category ?')">Delete</a>
                                 </td>
                             </tr>
                             @endforeach
