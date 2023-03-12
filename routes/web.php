@@ -38,4 +38,5 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])-
     Route::get('/manage-product', [ProductController::class,'manageProduct'])->name('manage-product');
     Route::get('/edit-product/{id}', [ProductController::class,'edit'])->name('edit-product');
     Route::post('/update-product/{id}', [ProductController::class,'update'])->name('update-product');
+    Route::get('/delete-product/{id}', [ProductController::class,'delete'])->name('delete-product');
 });

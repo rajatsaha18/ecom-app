@@ -51,7 +51,7 @@ class Product extends Model
         self::$product->selling_price       = $request->selling_price;
         self::$product->stock_amount        = $request->stock_amount;
         self::$product->description         = $request->description;
-        self::$product->image               = self::getImageUrl($request->file('image'));
+        self::$product->image               = self::$imageUrl;
         self::$product->save();
     }
 
