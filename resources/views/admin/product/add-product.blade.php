@@ -20,9 +20,8 @@ Add-Product Page
                                     <select class="form-control" name="category_id" id="" required>
                                         <option value="" disabled selected>--Select Category--</option>
                                         @foreach ($categories as $category)
-                                        <option value="">{{ $category->name }}</option>
+                                        <option value="{{ $category->id }}">{{ $category->name }}</option>
                                         @endforeach
-
                                     </select>
                                 </div>
                             </div>
@@ -45,6 +44,12 @@ Add-Product Page
                                 </div>
                             </div>
                             <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label">Stock Amount</label>
+                                <div class="col-sm-10">
+                                    <input type="text" name="stock_amount" class="form-control" id="inputEmail3"/>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
                                 <label for="inputPassword3" class="col-sm-2 col-form-label">Product Description</label>
                                 <div class="col-sm-10">
                                     <textarea name="description" class="form-control" id="inputPassword3"></textarea>
@@ -56,7 +61,13 @@ Add-Product Page
                                     <input type="file" name="image" class="form-control" id="inputEmail3"/>
                                 </div>
                             </div>
-                            <button type="submit" class="btn btn-success">Add Product</button>
+                            <div class="row mb-3">
+                                <label for="inputEmail3" class="col-sm-2 col-form-label"></label>
+                                <div class="col-sm-10">
+                                    <input type="submit" class="btn btn-success" value="Add Product"/>
+                                </div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
