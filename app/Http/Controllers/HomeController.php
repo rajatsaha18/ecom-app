@@ -2,12 +2,21 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    private $categories;
+    private $products;
     public function index(){
-        return view('website.home.home');
+        $this->products = Product::orderBy('id', 'desc')->take(6)->get();
+        $this->categories = Category::all();
+        return view('website.home.home',[
+            'categories' => $this->categories,
+            'products' => $this->products,
+        ]);
     }
 
     public function category(){

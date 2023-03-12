@@ -35,10 +35,10 @@
                             Product Category
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{ route('category') }}">Men Fashion</a></li>
-                            <li><a class="dropdown-item" href="{{ route('category') }}">Women Fashion</a></li>
-                            <li><a class="dropdown-item" href="{{ route('category') }}">Electronics</a></li>
-                            <li><a class="dropdown-item" href="{{ route('category') }}">Home Products</a></li>
+                            @foreach ($categories as $category)
+                            <li><a class="dropdown-item" href="{{ route('category') }}">{{ $category->name }}</a></li>
+                            @endforeach
+
 
                         </ul>
                     </li>
