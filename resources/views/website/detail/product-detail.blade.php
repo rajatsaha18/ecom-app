@@ -10,7 +10,7 @@ Product-detail Page
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-body">
-                    <img src="{{ asset('/') }}image/img1.jpg" alt="">
+                    <img src="{{ asset('/') }}website/image/img1.jpg" alt="">
                 </div>
             </div>
             <div class="col-md-6">

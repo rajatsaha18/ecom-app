@@ -24,7 +24,7 @@ Home Page
                     <div class="card-body">
                       <h5 class="card-title">New Shari</h5>
                       <p class="card-text">TK. 900</p>
-                      <a href="#" class="btn btn-success">Detail</a>
+                      <a href="{{ route('detail') }}" class="btn btn-success">Detail</a>
                     </div>
                   </div>
             </div>
@@ -34,7 +34,7 @@ Home Page
                     <div class="card-body">
                       <h5 class="card-title">Men Watch</h5>
                       <p class="card-text">TK. 1200</p>
-                      <a href="#" class="btn btn-success">Detail</a>
+                      <a href="{{ route('detail') }}" class="btn btn-success">Detail</a>
                     </div>
                   </div>
             </div>
@@ -44,7 +44,7 @@ Home Page
                     <div class="card-body">
                       <h5 class="card-title">Men Watch</h5>
                       <p class="card-text">TK. 1200</p>
-                      <a href="#" class="btn btn-success">Detail</a>
+                      <a href="{{ route('detail') }}" class="btn btn-success">Detail</a>
                     </div>
                   </div>
             </div>
@@ -54,7 +54,7 @@ Home Page
                     <div class="card-body">
                       <h5 class="card-title">Men Watch</h5>
                       <p class="card-text">TK. 1200</p>
-                      <a href="#" class="btn btn-success">Detail</a>
+                      <a href="{{ route('detail') }}" class="btn btn-success">Detail</a>
                     </div>
                   </div>
             </div>
@@ -64,7 +64,7 @@ Home Page
                     <div class="card-body">
                       <h5 class="card-title">Men Watch</h5>
                       <p class="card-text">TK. 1200</p>
-                      <a href="#" class="btn btn-success">Detail</a>
+                      <a href="{{ route('detail') }}" class="btn btn-success">Detail</a>
                     </div>
                   </div>
             </div>

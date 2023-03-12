@@ -64,11 +64,11 @@
 
     @yield('body')
 
-    <section class="mt-5 py-3 bg-info fixed-bottom">
+    <section class="mt-5 bg-info sticky-bottom">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center">Design & Develop By <b>Rajat Saha</b></p>
+                    <p class="text-center mt-2">Design & Develop By <b>Rajat Saha</b></p>
                 </div>
             </div>
         </div>
