@@ -24,4 +24,10 @@ class ProductController extends Controller
         $this->products = Product::all();
         return view('admin.product.manage-product',['products' => $this->products]);
     }
+
+    public function edit($id)
+    {
+        $this->product = Product::find($id);
+        return view('admin.product.edit',['product' => $this->product]);
+    }
 }

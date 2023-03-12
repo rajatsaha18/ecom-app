@@ -34,7 +34,7 @@ Manage-Product Page
                                 <td>{{ $product->selling_price }}</td>
                                 <td><img src="{{ asset($product->image) }}" alt="" height="70" width="50px"></td>
                                 <td>
-                                    <a href="" class="btn btn-success btn-sm">Edit</a>
+                                    <a href="{{ route('edit-product',['id'=>$product->id]) }}" class="btn btn-success btn-sm">Edit</a>
                                     <a href="" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure delete this category ?')">Delete</a>
                                 </td>
                             </tr>

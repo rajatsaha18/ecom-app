@@ -40,7 +40,6 @@ Category Page
                     </div>
                   </div>
             </div>
-
         </div>
     </div>
 </section>
