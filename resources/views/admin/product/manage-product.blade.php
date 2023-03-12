@@ -35,7 +35,7 @@ Manage-Product Page
                                 <td><img src="{{ asset($product->image) }}" alt="" height="70" width="50px"></td>
                                 <td>
                                     <a href="{{ route('edit-product',['id'=>$product->id]) }}" class="btn btn-success btn-sm">Edit</a>
-                                    <a href="" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure delete this category ?')">Delete</a>
+                                    <a href="{{ route('delete-product',['id' => $product->id]) }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure delete this category ?')">Delete</a>
                                 </td>
                             </tr>
                             @endforeach
