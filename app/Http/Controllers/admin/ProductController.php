@@ -18,7 +18,7 @@ class ProductController extends Controller
     }
     public function create(Request $request){
         Product::newProduct($request);
-        return redirect('/manage-product')->with('message');
+        return redirect('/manage-product')->with('message', 'product create successfully');
     }
     public function manageProduct(){
         $this->products = Product::all();
@@ -29,5 +29,12 @@ class ProductController extends Controller
     {
         $this->product = Product::find($id);
         return view('admin.product.edit',['product' => $this->product]);
+    }
+
+    public function update(Request $request,$id){
+        Product::updateProduct($request,$id);
+        return redirect('/manage-product')->with('message','product update successfully');
+
+
     }
 }
