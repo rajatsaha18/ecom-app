@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     private $categories;
+    private $category;
     private $products;
     private $product;
     public function index(){
@@ -21,11 +22,13 @@ class HomeController extends Controller
     }
 
     public function category($id){
-
+        $this->category = Category::find($id);
         $this->products = Product::where('category_id', $id)->orderBy('id', 'desc')->get();
+
         return view('website.category.category',[
 
             'products' => $this->products,
+            'category' => $this->category,
         ]);
     }
 
@@ -35,6 +38,7 @@ class HomeController extends Controller
     }
 
     public function myCart(){
+
         return view('website.cart.my-cart');
     }
 

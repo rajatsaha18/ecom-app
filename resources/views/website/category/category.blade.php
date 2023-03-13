@@ -8,7 +8,7 @@ Category Page
 <section class="py-5">
     <div class="container">
         <div class="row">
-            <h2 class="text-center">Men Fashion</h2>
+            <h2 class="text-center">{{ $category->name }}</h2>
             <hr/>
             @foreach ($products as $product)
             <div class="col-md-4">
