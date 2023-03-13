@@ -18,8 +18,8 @@ use App\Http\Controllers\admin\ProductController;
 */
 
 Route::get('/', [HomeController::class,'index'])->name('home');
-Route::get('/category', [HomeController::class,'category'])->name('category');
-Route::get('/detail', [HomeController::class,'detail'])->name('detail');
+Route::get('/category/{id}', [HomeController::class,'category'])->name('category');
+Route::get('/detail/{id}', [HomeController::class,'detail'])->name('detail');
 Route::get('/my-cart', [HomeController::class,'myCart'])->name('my-cart');
 Route::get('/account', [HomeController::class,'account'])->name('account');
 

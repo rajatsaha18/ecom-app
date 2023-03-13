@@ -11,11 +11,11 @@ Home Page
             @foreach ($products as $product)
             <div class="col-md-4 mt-3">
                 <div class="card " style="width: 18rem;">
-                    <img src="{{ asset($product->image) }}" class="card-img-top mt-3" alt="" height="150" width="90">
+                    <img src="{{ asset($product->image) }}" class="card-img-top mt-3" alt="" height="210" width="110">
                     <div class="card-body">
                       <h5 class="card-title">{{ $product->name }}</h5>
-                      <p class="card-text">{{ $product->selling_price }}</p>
-                      <a href="{{ route('detail') }}" class="btn btn-success">Detail</a>
+                      <p class="card-text">TK. {{ $product->selling_price }}</p>
+                      <a href="{{ route('detail',['id' => $product->id]) }}" class="btn btn-success">Detail</a>
                     </div>
                   </div>
             </div>

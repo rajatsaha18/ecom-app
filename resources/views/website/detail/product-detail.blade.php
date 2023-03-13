@@ -10,13 +10,13 @@ Product-detail Page
         <div class="row">
             <div class="col-md-6">
                 <div class="card card-body">
-                    <img src="{{ asset('/') }}website/image/img1.jpg" alt="">
+                    <img src="{{ asset($product->image) }}" alt="">
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="card card-body">
-                    <h1>New T-Shirt</h1>
-                    <h3>TK. 600</h3>
+                    <h1>{{ $product->name }}</h1>
+                    <h3>TK. {{ $product->selling_price }}</h3>
                     <p>Product Quantity</p>
                     <input type="number">
                     <a href="{{ route('my-cart') }}" class="btn btn-success mx-auto mt-2">Add To Cart</a>

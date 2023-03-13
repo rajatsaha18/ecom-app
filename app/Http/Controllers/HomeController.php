@@ -10,21 +10,28 @@ class HomeController extends Controller
 {
     private $categories;
     private $products;
+    private $product;
     public function index(){
         $this->products = Product::orderBy('id', 'desc')->take(6)->get();
-        $this->categories = Category::all();
+
         return view('website.home.home',[
-            'categories' => $this->categories,
+
             'products' => $this->products,
         ]);
     }
 
-    public function category(){
-        return view('website.category.category');
+    public function category($id){
+
+        $this->products = Product::where('category_id', $id)->orderBy('id', 'desc')->get();
+        return view('website.category.category',[
+
+            'products' => $this->products,
+        ]);
     }
 
-    public function detail(){
-        return view('website.detail.product-detail');
+    public function detail($id){
+        $this->product = Product::find($id);
+        return view('website.detail.product-detail',['product' => $this->product]);
     }
 
     public function myCart(){
