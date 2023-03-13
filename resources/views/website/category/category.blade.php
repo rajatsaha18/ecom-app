@@ -17,7 +17,7 @@ Category Page
                     <div class="card-body">
                       <h5 class="card-title">{{ $product->name }}</h5>
                       <p class="card-text">TK. 300</p>
-                      <a href="{{ route('detail') }}" class="btn btn-success">Detail</a>
+                      <a href="{{ route('detail',['id' => $product->id]) }}" class="btn btn-success">Detail</a>
                     </div>
                   </div>
             </div>
