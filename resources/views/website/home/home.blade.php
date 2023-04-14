@@ -59,13 +59,12 @@
         <div class="container">
             <div class="row">
                 @foreach ($products as $product)
-                    <div class="col-md-3 p-2 mt-3">
-                        <div class="card " style="width: 18rem;">
-                            <img src="{{ asset($product->image) }}" class="card-img-top mt-3" alt="" height="200"
-                                width="30">
+                    <div class="col-md-3 mt-3">
+                        <div class="card">
+                            <img src="{{ asset($product->image) }}" class="" alt=""/>
                             <div class="card-body">
-                                <h5 class="card-title">{{ $product->name }}</h5>
-                                <p class="card-text">TK. {{ $product->selling_price }}</p>
+                                <h5>{{ $product->name }}</h5>
+                                <p>TK. {{ $product->selling_price }}</p>
                                 <a href="{{ route('detail', ['id' => $product->id]) }}" class="btn btn-success">Detail</a>
                             </div>
                         </div>
